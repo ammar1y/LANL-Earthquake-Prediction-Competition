@@ -8,13 +8,17 @@ Acoustic/seismic precursors to failure appear to be a nearly universal phenomeno
 
 Laboratory system:
 
-![](images/earq1.png)
+<blockquote>
+<img src='images/earq1.png'>
+Laboratory system</blockquote>
 
 The driving piston displaces at a very constant velocity of 5 μm/s during the inter-event time and accelerates briefly during slip. An accelerometer records the acoustic emission (AE) emanating from the shearing layers. The rate of impulsive precursors **accelerates** as failure approaches.
 
 Our goal is to predict the time remaining before the next failure (Figure 1a, bottom) using only local, **moving time windows** of the AE data based on statistical features derived from the time windows.
 
-![](images/earq2.png)Figure 1 of the paper: part b shows acoustic emission (dynamic strain) data. The dashed rectangle represents a moving time window; each window generates a single point on each feature curve below
+<blockquote>
+<img src='images/earq2.png'>
+Figure 1 of the paper: part b shows acoustic emission (dynamic strain) data. The dashed rectangle represents a moving time window; each window generates a single point on each feature curve below</blockquote>
 
 From each time window, we compute a set of approximately 100 potentially relevant statistical features (e.g., mean, variance, kurtosis, and autocorrelation). The most useful features are then selected recursively. The Random Forest (RF) uses these selected features to predict the time remaining before the next failure.
 
@@ -24,7 +28,9 @@ We find that statistics quantifying the **signal amplitude** distribution (e.g.,
 
 Figure (3b) shows a raw time series far from failure. The signal exhibits small modulations that are challenging to identify by eye and persist throughout the stress cycle. These modulations **increase in amplitude** as failure is approached, as measured by the increase in signal variance.
 
-![](images/earq3.png)Figure 3 of the paper
+<blockquote>
+<img src='images/earq3.png'>
+Figure 3 of the paper</blockquote>
 
 Our ML-driven analysis suggests that the system emits a small but progressively increasing amount of **energy** throughout the stress cycle, before abruptly releasing the accumulated energy when a slip event takes place.
  
@@ -51,5 +57,4 @@ We compute many statistical features within each time window for use by the rand
 We computed these features on both the AE signal 𝜖 and its first finite difference, given at a time t<sub>i</sub> by:
 
 ![](images/earq4.png)
-
 Forests that analyze only the derivative of the dynamic strain have a slight performance advantage, and so results reported here use only features from the derivative signal.
