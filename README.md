@@ -58,3 +58,13 @@ We computed these features on both the AE signal 𝜖 and its first finite diffe
 
 ![](images/earq4.png)
 Forests that analyze only the derivative of the dynamic strain have a slight performance advantage, and so results reported here use only features from the derivative signal.
+
+## More Notes
+
+The input is a chunk of 0.0375 seconds of seismic data (ordered in time), which is recorded at 4MHz, hence 150'000 data points, and the output is time remaining until the following lab earthquake, in seconds.
+
+The seismic data is recorded using a piezoceramic sensor, which outputs a voltage upon deformation by incoming seismic waves. The seismic data of the input is this recorded voltage, in integers.
+
+The data is recorded in bins of 4096 samples. Withing those bins seismic data is recorded at 4MHz, but there is a 12 microseconds gap between each bin, an artifact of the recording device.
+
+There are several earthquake cycles in the test set as well.
