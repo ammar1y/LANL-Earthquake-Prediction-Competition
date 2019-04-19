@@ -1,3 +1,5 @@
+## Training-Data Segments
+
 The following images show the segments of the training data; each segment in an image. If we take a look at the training data variables (`acoustic_data` and `time_to_failure`):
 
 ![](./images/acoustic_time.jpg)
